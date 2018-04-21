@@ -1,0 +1,23 @@
+{
+	"name": "hsl-sop-app-config",
+	"version": "1.0.6",
+	"description": "Gathers configuration data required by the various modules that make up the SOP app",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "http://gitlab.imginconline.com/HeavenSentLegal/hsl-sop-app-config.git"
+	},
+	"author": "gochinj",
+	"license": "MIT",
+	"dependencies": {
+		"@google-cloud/storage": "^1.2.1"
+	},
+	"devDependencies": {
+		"chai": "^4.1.2",
+		"chai-as-promised": "^7.1.1",
+		"mocha": "^3.5.0"
+	}
+}

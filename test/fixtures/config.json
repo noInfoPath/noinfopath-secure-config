@@ -1,0 +1,9 @@
+{
+	"projectId": "hsl-sop",
+	"gcs": {
+		"ops": {
+			"bucket": "hsl-sop-bucket",
+			"path": "ops/.private.json"
+		}
+	}
+}
