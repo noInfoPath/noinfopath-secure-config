@@ -38,15 +38,17 @@
 var authenticate = require("./api-auth");
 
 function SecureAppConfig(config) {
-	this._saveCreds = function (creds) {
-		Object.keys(creds).forEach(function (k) {
-			this[k] = creds[k];
-		}.bind(this));
-	};
+	var me = this;
 
 	this.init = function () {
 		return authenticate(config)
-			.then(this._saveCreds.bind(this))
+			.then(function (creds) {
+				Object.keys(creds).forEach(function (k) {
+					me[k] = creds[k];
+				});
+
+				return me;
+			})
 			.catch(function (err) {
 				throw err;
 			})

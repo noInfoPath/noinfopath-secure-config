@@ -1,9 +1,9 @@
 var path = require("path");
 
-module.exports = function (config) {
+module.exports = function (config, keyPath) {
 	if (typeof config !== "object") throw new TypeError("config is a required parameters.")
 
-	var keyFilePath = path.join(process.env.HOME, ".credentials", config.projectId, "gcs.json"),
+	var keyFilePath = keyPath || path.join(process.env.HOME, ".credentials", config.projectId, "gcs.json"),
 		gcs = require('@google-cloud/storage')({
 			projectId: config.projectId,
 			keyFilename: keyFilePath
