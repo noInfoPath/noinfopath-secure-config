@@ -1,7 +1,7 @@
 {
-	"name": "hsl-sop-app-config",
-	"version": "1.0.6",
-	"description": "Gathers configuration data required by the various modules that make up the SOP app",
+	"name": "noinfopath-secure-config",
+	"version": "1.0.0",
+	"description": "",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
